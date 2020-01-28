@@ -134,7 +134,7 @@ function listenDefaultCallback(webServer: Application, addr: any, pkgName: strin
   webServer
     .listen(
       addr.port || addr.path,
-      addr.host,
+     '0.0.0.0',
       (): void => {
         // send a message for tests
         if (isFunction(process.send)) {

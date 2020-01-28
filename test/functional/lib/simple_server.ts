@@ -29,8 +29,8 @@ export default class ExpressServer {
       this.app.use(bodyParser.urlencoded({
         extended: true
       }));
-
-      this.server = this.app.listen(port, () => resolve(this));
+      const host = '0.0.0.0';
+      this.server = this.app.listen(port,host, () => resolve(this));
     });
   }
 }
